@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="578" height="200"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var x = 0;
+      var y = 0;
+      var width = 578;
+      var height = 200;
+      var imageObj = new Image();
+
+      imageObj.onload = function() {
+      context.drawImage(imageObj,x,y,width,height);
+    };
+      imageObj.src = './d.jpg';
+      document.body.append(imageObj);
+    </script>
+  </body>
+</html>             
